@@ -36,7 +36,7 @@ KEY = "ce2cbd52-60e4-4e94-bb23-66099afe6d16"
 #TEMP STEP 1 of three legged OAuth opens a browser with working URL to get authorization code
 def redirecting(word):
     #webbrowser.open('https://bbgbctest.blackboard.com/learn/api/public/v1/oauth2/authorizationcode?redirect_uri=http://10.13.88.66:8000/info/&response_type=code&client_id=ce2cbd52-60e4-4e94-bb23-66099afe6d16&scope=read&state=DC1067EE-63B9-40FE-A0AD-B9AC069BF4B0/',new=0,autoraise=False)
-    webbrowser.open('')
+    webbrowser.open('https://www.google.ca/')
     word=''
     
     return HttpResponse (word)
