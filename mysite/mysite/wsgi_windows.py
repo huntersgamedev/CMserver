@@ -16,8 +16,8 @@ site.addsitedir('C:\Users\101180612\Envs\cmApp\Lib\site-packages')
 sys.path.append('C:\Users\101180612\Envs\cmApp')
 sys.path.append('C:\Users\101180612\Envs\cmApp\CMserver')
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'my_application.settings'
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "my_application.settings")
+os.environ['DJANGO_SETTINGS_MODULE'] = 'CMserver.settings'
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "CMserver.settings")
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
