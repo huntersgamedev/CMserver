@@ -13,8 +13,8 @@ site.addsitedir('C:\Users\101180612\Envs\cmApp\Lib\site-packages')
 
 
 # Add the app's directory to the PYTHONPATH
-sys.path.append('C:\Users\101180612\Envs\cmApp')
-sys.path.append('C:\Users\101180612\Envs\cmApp\CMserver')
+sys.path.append('C:\Users\101180612\Envs\cmApp\CMserver\mysite')
+sys.path.append('C:\Users\101180612\Envs\cmApp\CMserver\mysite\mysite')
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'CMserver.settings'
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "CMserver.settings")
