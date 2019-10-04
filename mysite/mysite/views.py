@@ -21,7 +21,7 @@ global target_url
 target_url = 'https://bbgbctest.blackboard.com'
 
 global redirect_url
-redirect_url='http://startgbc.georgebrown.ca/info'
+redirect_url='http://startgbc.georgebrown.ca/'
 
 global SECRET
 SECRET = "ANuwg76VOV7aIA0KYqfv6KWIGOWEw0FX"  
