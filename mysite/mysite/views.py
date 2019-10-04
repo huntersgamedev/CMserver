@@ -90,7 +90,7 @@ def UserOAuthToken(request,userCode):
         if r.status_code == 200:  
             parsed_json = json.loads(r.text)  
             TOKEN = parsed_json['access_token']  
-            session['TOKEN']=TOKEN
+            session['TOKEN']=r
             GetUserData(request)
 
             return HttpResponse(r)
