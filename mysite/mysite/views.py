@@ -37,7 +37,7 @@ KEY = "ce2cbd52-60e4-4e94-bb23-66099afe6d16"
 def redirecting(word):
     webbrowser.open('https://bbgbctest.blackboard.com/learn/api/public/v1/oauth2/authorizationcode?redirect_uri=http://startgbc.georgebrown.ca/info/&response_type=code&client_id=ce2cbd52-60e4-4e94-bb23-66099afe6d16&scope=read&state=DC1067EE-63B9-40FE-A0AD-B9AC069BF4B0/',new=0,autoraise=False)
     #webbrowser.open('https://www.google.ca/')
-    word=''
+    word='fucking shit'
     
     return HttpResponse (word)
 
