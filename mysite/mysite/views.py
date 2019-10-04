@@ -107,7 +107,7 @@ def GetUserData(request):
     target_url = 'https://bbgbctest.blackboard.com'
     oauth_path ='/learn/api/public/v1/users'
     TOKEN=request.session['TOKEN']
-    r=requests.get(target_url+oauth_path,headers={'Authorization':'Bearer '+TOKEN}, verify=True)
+    r=requests.get(target_url+oauth_path,headers={'Authorization':'Bearer '+request.session['TOKEN']}, verify=True)
 
     print("[User:Data()] STATUS CODE:"+ str(r.status_code))
     print("[User.Data()] RESPONSE: " + r.text)
