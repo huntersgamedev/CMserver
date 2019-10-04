@@ -21,7 +21,7 @@ global target_url
 target_url = 'https://bbgbctest.blackboard.com'
 
 global redirect_url
-redirect_url='http://startgbc.georgebrown.ca/'
+redirect_url='http://startgbc.georgebrown.ca/info/'
 
 global SECRET
 SECRET = "ANuwg76VOV7aIA0KYqfv6KWIGOWEw0FX"  
@@ -67,8 +67,8 @@ def UserOAuthToken(request,userCode):
         CREDENTIALS = 'client_credentials'  
         PAYLOAD = {  
             'grant_type':'authorization_code',  
-            'code':userCode,}
-            #'redirect_uri':redirect_url,     }
+            'code':userCode,
+            'redirect_uri':redirect_url,     }
 
         global TOKEN
         TOKEN = None  
