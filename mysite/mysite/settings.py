@@ -27,7 +27,7 @@ SECRET_KEY = 'my%%1)$01y=fg%0*x5hij!lj=$2zf8czl@lg7wc-lvkqjmt7)_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.13.88.66']
+ALLOWED_HOSTS = ['10.13.88.66','startgbc.georgebrown.ca']
 
 
 # Application definition
