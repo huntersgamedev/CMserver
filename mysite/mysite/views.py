@@ -91,7 +91,7 @@ def UserOAuthToken(request,userCode):
         if r.status_code == 200:  
             parsed_json = json.loads(r.text)  
             TOKEN = parsed_json['access_token']  
-            session['TOKEN']=r.json
+            session['TOKEN']=TOKEN
             GetUserData(request)
 
             return HttpResponse(r)
@@ -107,7 +107,7 @@ def GetUserData(request):
     target_url = 'https://bbgbctest.blackboard.com'
     oauth_path ='/learn/api/public/v1/users'
     TOKEN=request.session['TOKEN']
-    r=requests.get(target_url+oauth_path,headers={'Authorization':'Bearer '+request.session['TOKEN']}, verify=True)
+    r=requests.get(target_url+oauth_path,headers={'Authorization':'Bearer '+TOKEN}, verify=True)
 
     print("[User:Data()] STATUS CODE:"+ str(r.status_code))
     print("[User.Data()] RESPONSE: " + r.text)
