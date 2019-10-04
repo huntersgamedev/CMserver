@@ -92,7 +92,7 @@ def UserOAuthToken(request,userCode):
             parsed_json = json.loads(r.text)  
             TOKEN = parsed_json['access_token']  
             session['TOKEN']=r.text
-            #GetUserData(request)
+            GetUserData(request)
 
             return HttpResponse(r)
         
@@ -103,7 +103,7 @@ def UserOAuthToken(request,userCode):
 #retreive users Data for the game leaderboard 
 #NEXT NEEDED STEP FIRE OFF REQUIRED DATA TO DATABASE
 def GetUserData(request):
-    
+    print('the session varaible is'+request.session['TOKEN'])
     target_url = 'https://bbgbctest.blackboard.com'
     oauth_path ='/learn/api/public/v1/users'
     TOKEN=request.session['TOKEN']
