@@ -68,7 +68,8 @@ def UserOAuthToken(request,userCode):
         PAYLOAD = {  
             'grant_type':'authorization_code',  
             'code':userCode,
-            'redirect_uri':redirect_url,     }
+            'redirect_uri':redirect_url,     
+            }
 
         global TOKEN
         TOKEN = None  
@@ -90,7 +91,7 @@ def UserOAuthToken(request,userCode):
         if r.status_code == 200:  
             parsed_json = json.loads(r.text)  
             TOKEN = parsed_json['access_token']  
-            session['TOKEN']=r
+            session['TOKEN']=r.text
             GetUserData(request)
 
             return HttpResponse(r)
@@ -139,9 +140,9 @@ def GetUserData(request):
             #parsed_json = json.loads(r.text)  
             #student = parsed_json.GET.get()  
             #print("STUDENTINFO: "+ student)
-            print("[auth:setToken()] RESPONSE: "+ r.text)
+            print("[auth:setToken()] RESPONSE: "+ r)
           
-        return HttpResponse(r)
+        return HttpResponse(r.text)
 
 
     
