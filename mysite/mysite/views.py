@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpRequest
+from django.http import HttpResponseRedirect
 from django.db.models import IntegerField
 from django.db.models.functions import Cast
 from scorsite.models import PostUserScore
@@ -35,11 +36,11 @@ KEY = "ce2cbd52-60e4-4e94-bb23-66099afe6d16"
 
 #TEMP STEP 1 of three legged OAuth opens a browser with working URL to get authorization code
 def redirecting(word):
-    webbrowser.open('https://bbgbctest.blackboard.com/learn/api/public/v1/oauth2/authorizationcode?redirect_uri=http://startgbc.georgebrown.ca/info/&response_type=code&client_id=ce2cbd52-60e4-4e94-bb23-66099afe6d16&scope=read&state=DC1067EE-63B9-40FE-A0AD-B9AC069BF4B0/',new=0,autoraise=False)
+    #webbrowser.open('https://bbgbctest.blackboard.com/learn/api/public/v1/oauth2/authorizationcode?redirect_uri=http://startgbc.georgebrown.ca/info/&response_type=code&client_id=ce2cbd52-60e4-4e94-bb23-66099afe6d16&scope=read&state=DC1067EE-63B9-40FE-A0AD-B9AC069BF4B0/',new=0,autoraise=False)
     #webbrowser.open('https://www.google.ca/')
-    word='fucking shit'
+    RedirectURI='https://bbgbctest.blackboard.com/learn/api/public/v1/oauth2/authorizationcode?redirect_uri=http://startgbc.georgebrown.ca/info/&response_type=code&client_id=ce2cbd52-60e4-4e94-bb23-66099afe6d16&scope=read&state=DC1067EE-63B9-40FE-A0AD-B9AC069BF4B0/'
     
-    return HttpResponse (word)
+    return HttpResponseRedirect (RedirectURI)
 
 
 # STEP 2 of three legged OAuth gets the users authorization code then gets a oauth token
