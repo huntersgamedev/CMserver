@@ -52,5 +52,4 @@ urlpatterns = [
 
     #Reset All Values for User(Debug for developer use)
     path('wipestats/',views.WipeStats,name='wipe stats'),
-    static(settings.STATIC_URL,document_root=settings.STATIC_ROOT),
-] 
+] +static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
