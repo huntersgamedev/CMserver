@@ -49,7 +49,8 @@ def retreiveUserToken(request):
     }
     r= request.GET.get('code')
     UserOAuthToken(request,r)
-    return HttpResponse(r)
+    return render(request,'WebGLBuild/index.html')
+    #return HttpResponse(r)
 
 
 
