@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from.import views
+from django.conf.urls.static import static
 
 
 urlpatterns = [
+
+    
     #path('admin/', admin.site.urls),
     path('',views.redirecting, name='redirecting'),
     path('info/', views.retreiveUserToken,name='retreiveUserToken'),
@@ -49,8 +52,4 @@ urlpatterns = [
     #Reset All Values for User(Debug for developer use)
     path('wipestats/',views.WipeStats,name='wipe stats'),
     
-
-
-    
-
-]
+] +static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
