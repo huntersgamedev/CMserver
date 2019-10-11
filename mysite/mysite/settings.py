@@ -40,9 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'scorsite.apps.ScorsiteConfig',
-    'mysite.apps.templates',
-
+    'scorsite.apps.ScorsiteConfig'
 ]
 
 MIDDLEWARE = [
