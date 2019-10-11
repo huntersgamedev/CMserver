@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from.import views
 
+
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path('',views.redirecting, name='redirecting'),
@@ -47,6 +48,7 @@ urlpatterns = [
 
     #Reset All Values for User(Debug for developer use)
     path('wipestats/',views.WipeStats,name='wipe stats'),
+    
 
 
     
