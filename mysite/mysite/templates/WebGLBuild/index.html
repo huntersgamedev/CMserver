@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    {% load static %}
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Change Makers: A Social Innovation Experience</title>
-    <link rel="shortcut icon" href="{% static 'TemplateData/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'TemplateData/style.css' %}">
-    <script src="{% static 'TemplateData/UnityProgress.js' %}"></script>  
-    <script src="{% static 'Build/UnityLoader.js' %}"></script>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "{% static 'Build/WebGLBuild.json' %}", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/ChangeMakers Builds.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
@@ -19,7 +18,7 @@
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">Change Makers: A Social Innovation ExperienceL</div>
+        <div class="title">Change Makers: A Social Innovation Experience</div>
       </div>
     </div>
   </body>
