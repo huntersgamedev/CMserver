@@ -160,8 +160,8 @@ def GetLeaderBoard(request):
 
 def UpdateScore(request,Score):
     #print('IM LOOKING FOR THIS GUY'  +request.session['UserName'])
-    #PostUserScore.objects.filter(UserName=request.session['UserName']).update(Score=Score)
-    PostUserScore.objects.filter(UserName='gstudent1').update(Score=Score)
+    PostUserScore.objects.filter(UserName=request.session['UserName']).update(Score=Score)
+    #PostUserScore.objects.filter(UserName='gstudent1').update(Score=Score)
    
     #UD.Score=Score
     #UD.Save()
@@ -188,33 +188,33 @@ def LoadPlayerData(request):
 #Saves tutorial data
 def SaveDorm(request):
     
-    #UserSaveFile.objects.filter(UserName=request.session['UserName']).update(Tutorial=1)
-    UserSaveFile.objects.filter(UserName='gstudent1').update(Tutorial=1)
+    UserSaveFile.objects.filter(UserName=request.session['UserName']).update(Tutorial=1)
+    #UserSaveFile.objects.filter(UserName='gstudent1').update(Tutorial=1)
 
     return HttpResponse('')
 
 #---------------saves character creator data---------------------
 def SaveCharacter(request,Head,Body):
 
-     #UserSaveFile.objects.filter(UserName=request.session['UserName']).update(CharHead=Head)
-     #UserSaveFile.objects.filter(UserName=request.session['UserName']).update(CharBody=Body)
-     UserSaveFile.objects.filter(UserName='gstudent1').update(CharHead=Head)
-     UserSaveFile.objects.filter(UserName='gstudent1').update(CharBody=Body)
+     UserSaveFile.objects.filter(UserName=request.session['UserName']).update(CharHead=Head)
+     UserSaveFile.objects.filter(UserName=request.session['UserName']).update(CharBody=Body)
+     #UserSaveFile.objects.filter(UserName='gstudent1').update(CharHead=Head)
+     #UserSaveFile.objects.filter(UserName='gstudent1').update(CharBody=Body)
 
      return HttpResponse('')
 
 #-----------------saves cooks scores------------------------
 def savecooksscore(request,CooksScore):
     
-    #UserSaveFile.objects.filter(UserName=request.session['UserName']).update(CooksScore=CooksScore)
-    UserSaveFile.objects.filter(UserName='gstudent1').update(CooksScore=CooksScore)
+    UserSaveFile.objects.filter(UserName=request.session['UserName']).update(CooksScore=CooksScore)
+    #UserSaveFile.objects.filter(UserName='gstudent1').update(CooksScore=CooksScore)
 
     return HttpResponse('')
 
 def savecooksquiz(request,CooksQuiz):
     
-    #UserSaveFile.objects.filter(UserName=request.session['UserName']).update(CooksQuiz=CooksQuiz)
-    UserSaveFile.objects.filter(UserName='gstudent1').update(CooksQuiz=CooksQuiz)
+    UserSaveFile.objects.filter(UserName=request.session['UserName']).update(CooksQuiz=CooksQuiz)
+    #UserSaveFile.objects.filter(UserName='gstudent1').update(CooksQuiz=CooksQuiz)
 
     return HttpResponse('')
 
@@ -223,15 +223,15 @@ def savecooksquiz(request,CooksQuiz):
 
 def savehomesscore(request,HomesScore):
     
-    #UserSaveFile.objects.filter(UserName=request.session['UserName']).update(HomesScore=HomesScore)
-    UserSaveFile.objects.filter(UserName='gstudent1').update(HomesScore=HomesScore)
+    UserSaveFile.objects.filter(UserName=request.session['UserName']).update(HomesScore=HomesScore)
+    #UserSaveFile.objects.filter(UserName='gstudent1').update(HomesScore=HomesScore)
 
     return HttpResponse('')
 
 def savehomesquiz(request,HomesQuiz):
     
-    #UserSaveFile.objects.filter(UserName=request.session['UserName']).update(HomesQuiz=HomesQuiz)
-    UserSaveFile.objects.filter(UserName='gstudent1').update(HomesQuiz=HomesQuiz)
+    UserSaveFile.objects.filter(UserName=request.session['UserName']).update(HomesQuiz=HomesQuiz)
+    #UserSaveFile.objects.filter(UserName='gstudent1').update(HomesQuiz=HomesQuiz)
 
     return HttpResponse('')
 
@@ -240,15 +240,15 @@ def savehomesquiz(request,HomesQuiz):
 
 def savetoysscore(request,ToysScore):
     
-    #UserSaveFile.objects.filter(UserName=request.session['UserName']).update(ToysScore=ToysScore)
-    UserSaveFile.objects.filter(UserName='gstudent1').update(ToysScore=ToysScore)
+    UserSaveFile.objects.filter(UserName=request.session['UserName']).update(ToysScore=ToysScore)
+    #UserSaveFile.objects.filter(UserName='gstudent1').update(ToysScore=ToysScore)
 
     return HttpResponse('')
 
 def savetoysquiz(request,ToysQuiz):
 
-    #UserSaveFile.objects.filter(UserName=request.session['UserName']).update(ToysQuiz=ToysQuiz)
-    UserSaveFile.objects.filter(UserName='gstudent1').update(ToysQuiz=ToysQuiz)
+    UserSaveFile.objects.filter(UserName=request.session['UserName']).update(ToysQuiz=ToysQuiz)
+    #UserSaveFile.objects.filter(UserName='gstudent1').update(ToysQuiz=ToysQuiz)
 
     return HttpResponse('')
 
