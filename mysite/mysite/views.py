@@ -143,7 +143,7 @@ def GetUserData(request):
             #print("STUDENTINFO: "+ student)
             print("[auth:setToken()] RESPONSE: "+ r)
           
-        return HttpResponse(r.text)
+        return HttpResponse('')
 
 
     
