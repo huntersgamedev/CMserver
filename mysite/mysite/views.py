@@ -181,8 +181,8 @@ def LoadPlayerData(request):
     print(request.session['UserName'])
 
     Test=request.session['UserName']
-    UserSaveFile.objects.filter(UserName=Test)
     JTest=serialize('json',Test)
+    UserSaveFile.objects.filter(UserName=JTest)
 
     return HttpResponse(JTest)
     #search the table for a user
