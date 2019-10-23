@@ -178,6 +178,7 @@ def UpdateScore(request,Score):
 def LoadPlayerData(request):
 
     #CurrentUser=request.session['UserName']
+    print(request.session['UserName'])
 
     Test=request.session['UserName']
     #UserSaveFile.objects.filter(UserName='gstudent1')
